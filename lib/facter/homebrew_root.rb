@@ -7,7 +7,7 @@ Facter.add(:homebrew_root) do
   setcode do
     if File.exist? "#{Facter.value(:boxen_home)}/homebrew/bin/brew"
       "#{Facter.value(:boxen_home)}/homebrew"
-    else if File.exist? "/usr/local/Homebrew/bin/brew"
+    elsif File.exist? "/usr/local/Homebrew/bin/brew"
       "/usr/local/Homebrew"
     else
       "/usr/local"
